@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Operators</h1>
+<h2>CALCULADORA</h2>
+</body>
+<input type="text" id="n11" placeholder="n1">
+<input type="text" id="n22" placeholder="n2">
+<select id="op">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<button id="calcular2">Calcular</button>
+<output id="r2"></output>
+<script>
+     document.querySelector('#calcular2').addEventListener('click', () =>{
+        const num1 = parseInt(document.querySelector('#n11').value);
+        const num2 = parseInt(document.querySelector('#n22').value);
+        const op2 = document.querySelector('#op').value;
+        let r;
+        if(op2 == '+'){
+            r = num1 + num2;
+        }else if( op2 == '-'){
+            r = num1 - num2;
+        }else if(op2 == '*'){
+            r = num1 * num2;
+        }else if(op2 == '/'){
+            r = num1 / num2;
+        }
+        document.querySelector('#r2').innerHTML = r;
+    });
+
+</script>
